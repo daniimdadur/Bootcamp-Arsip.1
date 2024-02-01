@@ -1,0 +1,2 @@
+menambah file2.txt
+menambah baris di file2.txt

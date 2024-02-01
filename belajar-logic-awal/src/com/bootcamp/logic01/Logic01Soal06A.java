@@ -1,0 +1,38 @@
+package com.bootcamp.logic01;
+
+import java.util.Scanner;
+
+public class Logic01Soal06A {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Masukan Nilai N: ");
+
+        int n = input.nextInt();
+        int angka = 2;
+        int bilanganPrimaDiTemukan = 0;
+
+        while (bilanganPrimaDiTemukan < n){
+            if (isiBilanganPrima(angka)) {
+                System.out.print(angka+ " ");
+                bilanganPrimaDiTemukan++;
+            }
+            angka++;
+        }
+
+
+    }
+    public static boolean isiBilanganPrima(int n){
+        if (n <= 1){
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n) ; i++) {
+            if (n % i == 0){
+                return false;
+            }
+
+        }return true;
+    }
+
+
+}
